@@ -13,7 +13,7 @@ def calculate_image_size(width, height, bits_per_pixel):
 
 # %%
 def image_inputReadProcess():
-    image=cv2.imread('../images/fish2.jpg')
+    image=cv2.imread('./images/fish2.jpg')
     #convert image read from bgr to RGB
     image=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
     #scale image
@@ -87,7 +87,7 @@ def image_compress(m, i, img, clusters):
     
     # Saving the compressed image using OpenCV
     
-    compressed_image_path =  f'../images/compressed_{formatted_time}-{clusters}_colors.png'
+    compressed_image_path =  f'./images/compressed_{formatted_time}-{clusters}_colors.png'
     cv2.imwrite(compressed_image_path, (recovered * 255).astype(np.uint8))
     
     
@@ -117,8 +117,8 @@ def return_base64Image():
 
     # %%
     # Define image file paths
-    original_image_path = '../images/fish2.jpg'
-    compressed_image_path = f'../images/compressed_{formatted_time}-{clusters}_colors.png' 
+    original_image_path = './images/fish2.jpg'
+    compressed_image_path = f'./images/compressed_{formatted_time}-{clusters}_colors.png' 
     #compressed_image_pickle_path = f'./images/compressed_{formatted_time}-{clusters}_colors.pkl'
 
 
